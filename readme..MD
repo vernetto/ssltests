@@ -50,3 +50,6 @@ Is CN=pierluigi, OU=puppoou, O=puppoo, L=zurich, ST=zh, C=ch correct?
 </pre>
 
 
+**keytool -export -storepass password -file client.cer -keystore clientkeystore.jks**
+
+**keytool -import -v -trustcacerts -file client.cer -keypass password -storepass password  -keystore servertruststore.jks**
