@@ -53,3 +53,12 @@ Is CN=pierluigi, OU=puppoou, O=puppoo, L=zurich, ST=zh, C=ch correct?
 **keytool -export -storepass password -file client.cer -keystore clientkeystore.jks**
 
 **keytool -import -v -trustcacerts -file client.cer -keypass password -storepass password  -keystore servertruststore.jks**
+
+
+
+keytool -importkeystore -srckeystore clientkeystore.jks -destkeystore clientkeystore.p12 -deststoretype PKCS12 -srcalias mykey  -deststorepass password -destkeypass password
+openssl pkcs12 -in clientkeystore.p12  -nokeys -out clientkey.pem
+
+openssl s_client -connect localhost:443 -CAfile cacert.pem -cert clientcert.pem -key clientkey.pem -state -tls1_2
+
+    

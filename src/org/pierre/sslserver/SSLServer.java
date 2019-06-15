@@ -15,6 +15,7 @@ public class SSLServer {
         System.setProperty("javax.net.ssl.keyStore", "serverkeystore.jks");
         System.setProperty("javax.net.ssl.keyStorePassword", "password");
         System.setProperty("javax.net.debug", "ssl");
+        System.setProperty("sun.security.ssl.allowUnsafeRenegotiation", "true");
         int port = 8443;
         ServerSocketFactory factory = SSLServerSocketFactory.getDefault();
         try (ServerSocket listener = factory.createServerSocket(port)) {
