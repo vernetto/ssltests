@@ -1,0 +1,462 @@
+main, READ: TLSv1.2 Handshake, length = 82
+check handshake state: client_hello[1]
+update handshake state: client_hello[1]
+upcoming handshake states: server_hello[2]
+*** ClientHello, TLSv1.2
+RandomCookie:  GMT: 1560472024 bytes = { 119, 254, 89, 7, 94, 172, 63, 196, 237, 28, 35, 154, 84, 6, 190, 6, 6, 23, 37, 29, 182, 208, 189, 33, 133, 208, 189, 179 }
+Session ID:  {}
+Cipher Suites: [TLS_DHE_DSS_WITH_AES_256_CBC_SHA256]
+Compression Methods:  { 0 }
+Extension signature_algorithms, signature_algorithms: SHA512withECDSA, SHA512withRSA, SHA384withECDSA, SHA384withRSA, SHA256withECDSA, SHA256withRSA, SHA256withDSA, SHA1withECDSA, SHA1withRSA, SHA1withDSA
+Extension extended_master_secret
+Extension renegotiation_info, renegotiated_connection: <empty>
+***
+%% Initialized:  [Session-2, SSL_NULL_WITH_NULL_NULL]
+Standard ciphersuite chosen: TLS_DHE_DSS_WITH_AES_256_CBC_SHA256
+%% Negotiating:  [Session-2, TLS_DHE_DSS_WITH_AES_256_CBC_SHA256]
+*** ServerHello, TLSv1.2
+RandomCookie:  GMT: 1560472024 bytes = { 117, 203, 192, 180, 99, 2, 227, 252, 127, 147, 180, 240, 162, 217, 17, 165, 90, 251, 42, 5, 239, 202, 201, 53, 239, 228, 96, 81 }
+Session ID:  {93, 3, 234, 216, 231, 52, 206, 50, 35, 172, 244, 123, 159, 26, 93, 186, 149, 88, 236, 97, 130, 104, 160, 164, 100, 46, 170, 33, 140, 21, 253, 170}
+Cipher Suite: TLS_DHE_DSS_WITH_AES_256_CBC_SHA256
+Compression Method: 0
+Extension renegotiation_info, renegotiated_connection: <empty>
+Extension extended_master_secret
+***
+Cipher suite:  TLS_DHE_DSS_WITH_AES_256_CBC_SHA256
+update handshake state: server_hello[2]
+upcoming handshake states: server certificate[11]
+upcoming handshake states: server_key_exchange[12](optional)
+upcoming handshake states: certificate_request[13](optional)
+upcoming handshake states: server_hello_done[14]
+upcoming handshake states: client certificate[11](optional)
+upcoming handshake states: client_key_exchange[16]
+upcoming handshake states: certificate_verify[15](optional)
+upcoming handshake states: client change_cipher_spec[-1]
+upcoming handshake states: client finished[20]
+upcoming handshake states: server change_cipher_spec[-1]
+upcoming handshake states: server finished[20]
+*** Certificate chain
+chain [0] = [
+[
+  Version: V3
+  Subject: CN=localhost, OU=pippoou, O=pippoo, L=zurich, ST=zu, C=ch
+  Signature Algorithm: SHA256withDSA, OID = 2.16.840.1.101.3.4.3.2
+
+  Key:  Sun DSA Public Key
+    Parameters:DSA
+	p:     8f7935d9 b9aae9bf abed887a cf4951b6 f32ec59e 3baf3718 e8eac496 1f3efd36
+    06e74351 a9c41833 39b809e7 c2ae1c53 9ba7475b 85d011ad b8b47987 75498469
+    5cac0e8f 14b33608 28a22ffa 27110a3d 62a99345 3409a0fe 696c4658 f84bdd20
+    819c3709 a01057b1 95adcd00 233dba54 84b6291f 9d648ef8 83448677 979cec04
+    b434a6ac 2e75e998 5de23db0 292fc111 8c9ffa9d 8181e733 8db792b7 30d7b9e3
+    49592f68 09987215 3915ea3d 6b8b4653 c633458f 803b32a4 c2e0f272 90256e4e
+    3f8a3b08 38a1c450 e4e18c1a 29a37ddf 5ea143de 4b66ff04 903ed5cf 1623e158
+    d487c608 e97f211c d81dca23 cb6e3807 65f822e3 42be484c 05763939 601cd667
+	q:     baf696a6 8578f7df dee7fa67 c977c785 ef32b233 bae580c0 bcd5695d
+	g:     16a65c58 20485070 4e7502a3 9757040d 34da3a34 78c154d4 e4a5c02d 242ee04f
+    96e61e4b d0904abd ac8f37ee b1e09f31 82d23c90 43cb642f 88004160 edf9ca09
+    b32076a7 9c32a627 f2473e91 879ba2c4 e744bd20 81544cb5 5b802c36 8d1fa83e
+    d489e94e 0fa0688e 32428a5c 78c478c6 8d0527b7 1c9a3abb 0b0be12c 44689639
+    e7d3ce74 db101a65 aa2b87f6 4c6826db 3ec72f4b 5599834b b4edb02f 7c90e9a4
+    96d3a55d 535bebfc 45d4f619 f63f3ded bb873925 c2f224e0 7731296d a887ec1e
+    4748f87e fb5fdeb7 5484316b 2232dee5 53ddaf02 112b0d1f 02da3097 3224fe27
+    aeda8b9d 4b2922d9 ba8be39e d9e103a6 3c52810b c688b7e2 ed4316e1 ef17dbde
+
+  y:
+    4b52e08b 243fe60f d41beae6 e48748a2 f6078fc7 bb5bd679 f7b3d6b1 caa6766c
+    e3e8520c 97665c39 7128e51e b168cb9b 85d84912 497f1529 25ffdac4 8b0ea9d2
+    d88b0da5 03ae4091 14e65a68 90ff258c 2aca668f b8c90f73 93fb391c 402dde5b
+    337ac511 d4cac1d3 f75d490a 5967444b 1fc5d2b1 a22e8315 1dd83206 ffd427db
+    85f43d75 07f4fc6b d6bc6ed7 d5fdc9a3 2c016555 e10229af a987966c a0cd5e84
+    c320874c 3ae1cc28 0e7fa63e aba32ab4 3b2e3304 4f6fae1b a633dbdd 25e87961
+    df481d22 5b5cb3dc 408d6ef8 f720b764 3104275b fb64a463 c11c0176 8102cfde
+    c3042b9e 0ec8997e 3515b8f4 fc52c80f cf255ec8 3603c986 fdb401bb 3692f430
+
+  Validity: [From: Tue Jun 11 21:40:31 CEST 2019,
+               To: Mon Sep 09 21:40:31 CEST 2019]
+  Issuer: CN=localhost, OU=pippoou, O=pippoo, L=zurich, ST=zu, C=ch
+  SerialNumber: [    6fedcfc6]
+
+Certificate Extensions: 1
+[1]: ObjectId: 2.5.29.14 Criticality=false
+SubjectKeyIdentifier [
+KeyIdentifier [
+0000: 4E 58 6C 5D FF 87 77 41   F9 24 F7 BD FF 0F 5B 18  NXl]..wA.$....[.
+0010: 55 BB 93 88                                        U...
+]
+]
+
+]
+  Algorithm: [SHA256withDSA]
+  Signature:
+0000: 30 3D 02 1C 1D 12 38 DE   3B AA 71 4F 32 03 0A 4B  0=....8.;.qO2..K
+0010: 57 E1 6A F2 56 C3 C1 69   E2 37 96 E2 46 3C 43 CC  W.j.V..i.7..F<C.
+0020: 02 1D 00 B6 28 67 C3 2D   58 D6 90 0E A7 D3 00 65  ....(g.-X......e
+0030: 68 0C 42 2C 02 F8 FC 22   A8 E6 76 99 40 A8 6C     h.B,..."..v.@.l
+
+]
+***
+update handshake state: certificate[11]
+upcoming handshake states: server_key_exchange[12](optional)
+upcoming handshake states: certificate_request[13](optional)
+upcoming handshake states: server_hello_done[14]
+upcoming handshake states: client certificate[11](optional)
+upcoming handshake states: client_key_exchange[16]
+upcoming handshake states: certificate_verify[15](optional)
+upcoming handshake states: client change_cipher_spec[-1]
+upcoming handshake states: client finished[20]
+upcoming handshake states: server change_cipher_spec[-1]
+upcoming handshake states: server finished[20]
+*** Diffie-Hellman ServerKeyExchange
+DH Modulus:  { 255, 255, 255, 255, 255, 255, 255, 255, 201, 15, 218, 162, 33, 104, 194, 52, 196, 198, 98, 139, 128, 220, 28, 209, 41, 2, 78, 8, 138, 103, 204, 116, 2, 11, 190, 166, 59, 19, 155, 34, 81, 74, 8, 121, 142, 52, 4, 221, 239, 149, 25, 179, 205, 58, 67, 27, 48, 43, 10, 109, 242, 95, 20, 55, 79, 225, 53, 109, 109, 81, 194, 69, 228, 133, 181, 118, 98, 94, 126, 198, 244, 76, 66, 233, 166, 55, 237, 107, 11, 255, 92, 182, 244, 6, 183, 237, 238, 56, 107, 251, 90, 137, 159, 165, 174, 159, 36, 17, 124, 75, 31, 230, 73, 40, 102, 81, 236, 230, 83, 129, 255, 255, 255, 255, 255, 255, 255, 255 }
+DH Base:  { 2 }
+Server DH Public Key:  { 63, 64, 49, 17, 150, 40, 191, 114, 82, 137, 194, 225, 187, 230, 10, 213, 85, 167, 196, 27, 215, 217, 37, 74, 156, 130, 67, 94, 118, 217, 148, 148, 40, 106, 17, 47, 27, 48, 47, 108, 23, 17, 106, 132, 169, 116, 25, 244, 238, 80, 107, 131, 27, 89, 92, 208, 72, 245, 161, 106, 111, 225, 21, 248, 60, 96, 158, 35, 67, 63, 23, 202, 119, 123, 132, 162, 217, 102, 39, 171, 133, 185, 232, 2, 99, 155, 89, 100, 91, 169, 162, 188, 57, 87, 169, 39, 16, 211, 146, 239, 32, 215, 101, 52, 51, 197, 118, 191, 162, 62, 117, 53, 224, 204, 128, 115, 212, 215, 32, 238, 224, 150, 116, 60, 1, 69, 94, 159 }
+Signature Algorithm SHA256withDSA
+Signed with a DSA or RSA public key
+update handshake state: server_key_exchange[12]
+upcoming handshake states: certificate_request[13](optional)
+upcoming handshake states: server_hello_done[14]
+upcoming handshake states: client certificate[11](optional)
+upcoming handshake states: client_key_exchange[16]
+upcoming handshake states: certificate_verify[15](optional)
+upcoming handshake states: client change_cipher_spec[-1]
+upcoming handshake states: client finished[20]
+upcoming handshake states: server change_cipher_spec[-1]
+upcoming handshake states: server finished[20]
+*** CertificateRequest
+Cert Types: RSA, DSS, ECDSA
+Supported Signature Algorithms: SHA512withECDSA, SHA512withRSA, SHA384withECDSA, SHA384withRSA, SHA256withECDSA, SHA256withRSA, SHA256withDSA, SHA1withECDSA, SHA1withRSA, SHA1withDSA
+Cert Authorities:
+<CN=pierluigi, OU=puppoou, O=puppoo, L=zurich, ST=zh, C=ch>
+update handshake state: unknown[13]
+upcoming handshake states: server_hello_done[14]
+upcoming handshake states: client certificate[11](optional)
+upcoming handshake states: client_key_exchange[16]
+upcoming handshake states: certificate_verify[15](optional)
+upcoming handshake states: client change_cipher_spec[-1]
+upcoming handshake states: client finished[20]
+upcoming handshake states: server change_cipher_spec[-1]
+upcoming handshake states: server finished[20]
+*** ServerHelloDone
+update handshake state: server_hello_done[14]
+upcoming handshake states: client certificate[11](optional)
+upcoming handshake states: client_key_exchange[16]
+upcoming handshake states: certificate_verify[15](optional)
+upcoming handshake states: client change_cipher_spec[-1]
+upcoming handshake states: client finished[20]
+upcoming handshake states: server change_cipher_spec[-1]
+upcoming handshake states: server finished[20]
+main, WRITE: TLSv1.2 Handshake, length = 1787
+main, READ: TLSv1.2 Handshake, length = 1363
+check handshake state: certificate[11]
+update handshake state: certificate[11]
+upcoming handshake states: client_key_exchange[16]
+upcoming handshake states: certificate_verify[15](optional)
+upcoming handshake states: client change_cipher_spec[-1]
+upcoming handshake states: client finished[20]
+upcoming handshake states: server change_cipher_spec[-1]
+upcoming handshake states: server finished[20]
+*** Certificate chain
+chain [0] = [
+[
+  Version: V3
+  Subject: CN=pierluigi, OU=puppoou, O=puppoo, L=zurich, ST=zh, C=ch
+  Signature Algorithm: SHA256withDSA, OID = 2.16.840.1.101.3.4.3.2
+
+  Key:  Sun DSA Public Key
+    Parameters:DSA
+	p:     8f7935d9 b9aae9bf abed887a cf4951b6 f32ec59e 3baf3718 e8eac496 1f3efd36
+    06e74351 a9c41833 39b809e7 c2ae1c53 9ba7475b 85d011ad b8b47987 75498469
+    5cac0e8f 14b33608 28a22ffa 27110a3d 62a99345 3409a0fe 696c4658 f84bdd20
+    819c3709 a01057b1 95adcd00 233dba54 84b6291f 9d648ef8 83448677 979cec04
+    b434a6ac 2e75e998 5de23db0 292fc111 8c9ffa9d 8181e733 8db792b7 30d7b9e3
+    49592f68 09987215 3915ea3d 6b8b4653 c633458f 803b32a4 c2e0f272 90256e4e
+    3f8a3b08 38a1c450 e4e18c1a 29a37ddf 5ea143de 4b66ff04 903ed5cf 1623e158
+    d487c608 e97f211c d81dca23 cb6e3807 65f822e3 42be484c 05763939 601cd667
+	q:     baf696a6 8578f7df dee7fa67 c977c785 ef32b233 bae580c0 bcd5695d
+	g:     16a65c58 20485070 4e7502a3 9757040d 34da3a34 78c154d4 e4a5c02d 242ee04f
+    96e61e4b d0904abd ac8f37ee b1e09f31 82d23c90 43cb642f 88004160 edf9ca09
+    b32076a7 9c32a627 f2473e91 879ba2c4 e744bd20 81544cb5 5b802c36 8d1fa83e
+    d489e94e 0fa0688e 32428a5c 78c478c6 8d0527b7 1c9a3abb 0b0be12c 44689639
+    e7d3ce74 db101a65 aa2b87f6 4c6826db 3ec72f4b 5599834b b4edb02f 7c90e9a4
+    96d3a55d 535bebfc 45d4f619 f63f3ded bb873925 c2f224e0 7731296d a887ec1e
+    4748f87e fb5fdeb7 5484316b 2232dee5 53ddaf02 112b0d1f 02da3097 3224fe27
+    aeda8b9d 4b2922d9 ba8be39e d9e103a6 3c52810b c688b7e2 ed4316e1 ef17dbde
+
+  y:
+    4a0048f3 0c94859d 3c5d4337 f3753c9f 427cf723 91c2dfa1 1399cdb0 731e9e1a
+    c0e12158 c535a54b 5c506c7d 0e5401f8 83275010 1178961a c674666b a08044fa
+    cc349b66 d7352fcb 05f6c60e fbdb9359 21b65f30 c62b63b9 37bc7cfc aaf316ed
+    a39c450f 97d59a8e 3b8d95ce 514959b7 dc093a68 da11b279 f4fb5679 c041a317
+    b35dc1ea 2a4c4413 2853db19 e3676246 0c481e11 f74f8f6a d4ca7f72 8e1323b4
+    8a4c1b42 71eab68f ec8566d9 0c8a3703 115b401c 77e5c78e d1a7049f 16b882a2
+    8ffb6720 04d1dc85 8be951b9 09cc6a11 bbb141f5 fda204f6 038de541 dc21b021
+    dd5f6ffe b0e80695 e2e6a013 0ed1b7ab 7a79d550 448efb44 be5ed9f1 92b38036
+
+  Validity: [From: Tue Jun 11 21:51:45 CEST 2019,
+               To: Mon Sep 09 21:51:45 CEST 2019]
+  Issuer: CN=pierluigi, OU=puppoou, O=puppoo, L=zurich, ST=zh, C=ch
+  SerialNumber: [    3d7dde33]
+
+Certificate Extensions: 1
+[1]: ObjectId: 2.5.29.14 Criticality=false
+SubjectKeyIdentifier [
+KeyIdentifier [
+0000: 61 7B 8F 7F 3D 97 03 75   4B A2 28 BD F8 1E F1 41  a...=..uK.(....A
+0010: 0F 19 0B F7                                        ....
+]
+]
+
+]
+  Algorithm: [SHA256withDSA]
+  Signature:
+0000: 30 3C 02 1C 64 61 55 7B   C6 DD 72 CA E6 45 30 78  0<..daU...r..E0x
+0010: 71 B7 9F 3F 98 6C 57 15   D5 C9 A6 D5 67 32 48 10  q..?.lW.....g2H.
+0020: 02 1C 54 BA 8B 10 F5 71   80 DE 9A 37 1D ED 1E CC  ..T....q...7....
+0030: 59 A6 44 47 53 A7 CF E3   11 F3 3D 1C 32 CA        Y.DGS.....=.2.
+
+]
+***
+Found trusted certificate:
+[
+[
+  Version: V3
+  Subject: CN=pierluigi, OU=puppoou, O=puppoo, L=zurich, ST=zh, C=ch
+  Signature Algorithm: SHA256withDSA, OID = 2.16.840.1.101.3.4.3.2
+
+  Key:  Sun DSA Public Key
+    Parameters:DSA
+	p:     8f7935d9 b9aae9bf abed887a cf4951b6 f32ec59e 3baf3718 e8eac496 1f3efd36
+    06e74351 a9c41833 39b809e7 c2ae1c53 9ba7475b 85d011ad b8b47987 75498469
+    5cac0e8f 14b33608 28a22ffa 27110a3d 62a99345 3409a0fe 696c4658 f84bdd20
+    819c3709 a01057b1 95adcd00 233dba54 84b6291f 9d648ef8 83448677 979cec04
+    b434a6ac 2e75e998 5de23db0 292fc111 8c9ffa9d 8181e733 8db792b7 30d7b9e3
+    49592f68 09987215 3915ea3d 6b8b4653 c633458f 803b32a4 c2e0f272 90256e4e
+    3f8a3b08 38a1c450 e4e18c1a 29a37ddf 5ea143de 4b66ff04 903ed5cf 1623e158
+    d487c608 e97f211c d81dca23 cb6e3807 65f822e3 42be484c 05763939 601cd667
+	q:     baf696a6 8578f7df dee7fa67 c977c785 ef32b233 bae580c0 bcd5695d
+	g:     16a65c58 20485070 4e7502a3 9757040d 34da3a34 78c154d4 e4a5c02d 242ee04f
+    96e61e4b d0904abd ac8f37ee b1e09f31 82d23c90 43cb642f 88004160 edf9ca09
+    b32076a7 9c32a627 f2473e91 879ba2c4 e744bd20 81544cb5 5b802c36 8d1fa83e
+    d489e94e 0fa0688e 32428a5c 78c478c6 8d0527b7 1c9a3abb 0b0be12c 44689639
+    e7d3ce74 db101a65 aa2b87f6 4c6826db 3ec72f4b 5599834b b4edb02f 7c90e9a4
+    96d3a55d 535bebfc 45d4f619 f63f3ded bb873925 c2f224e0 7731296d a887ec1e
+    4748f87e fb5fdeb7 5484316b 2232dee5 53ddaf02 112b0d1f 02da3097 3224fe27
+    aeda8b9d 4b2922d9 ba8be39e d9e103a6 3c52810b c688b7e2 ed4316e1 ef17dbde
+
+  y:
+    4a0048f3 0c94859d 3c5d4337 f3753c9f 427cf723 91c2dfa1 1399cdb0 731e9e1a
+    c0e12158 c535a54b 5c506c7d 0e5401f8 83275010 1178961a c674666b a08044fa
+    cc349b66 d7352fcb 05f6c60e fbdb9359 21b65f30 c62b63b9 37bc7cfc aaf316ed
+    a39c450f 97d59a8e 3b8d95ce 514959b7 dc093a68 da11b279 f4fb5679 c041a317
+    b35dc1ea 2a4c4413 2853db19 e3676246 0c481e11 f74f8f6a d4ca7f72 8e1323b4
+    8a4c1b42 71eab68f ec8566d9 0c8a3703 115b401c 77e5c78e d1a7049f 16b882a2
+    8ffb6720 04d1dc85 8be951b9 09cc6a11 bbb141f5 fda204f6 038de541 dc21b021
+    dd5f6ffe b0e80695 e2e6a013 0ed1b7ab 7a79d550 448efb44 be5ed9f1 92b38036
+
+  Validity: [From: Tue Jun 11 21:51:45 CEST 2019,
+               To: Mon Sep 09 21:51:45 CEST 2019]
+  Issuer: CN=pierluigi, OU=puppoou, O=puppoo, L=zurich, ST=zh, C=ch
+  SerialNumber: [    3d7dde33]
+
+Certificate Extensions: 1
+[1]: ObjectId: 2.5.29.14 Criticality=false
+SubjectKeyIdentifier [
+KeyIdentifier [
+0000: 61 7B 8F 7F 3D 97 03 75   4B A2 28 BD F8 1E F1 41  a...=..uK.(....A
+0010: 0F 19 0B F7                                        ....
+]
+]
+
+]
+  Algorithm: [SHA256withDSA]
+  Signature:
+0000: 30 3C 02 1C 64 61 55 7B   C6 DD 72 CA E6 45 30 78  0<..daU...r..E0x
+0010: 71 B7 9F 3F 98 6C 57 15   D5 C9 A6 D5 67 32 48 10  q..?.lW.....g2H.
+0020: 02 1C 54 BA 8B 10 F5 71   80 DE 9A 37 1D ED 1E CC  ..T....q...7....
+0030: 59 A6 44 47 53 A7 CF E3   11 F3 3D 1C 32 CA        Y.DGS.....=.2.
+
+]
+check handshake state: client_key_exchange[16]
+update handshake state: client_key_exchange[16]
+upcoming handshake states: certificate_verify[15](optional)
+upcoming handshake states: client change_cipher_spec[-1]
+upcoming handshake states: client finished[20]
+upcoming handshake states: server change_cipher_spec[-1]
+upcoming handshake states: server finished[20]
+*** ClientKeyExchange, DH
+DH Public key:  { 170, 4, 237, 164, 163, 166, 36, 36, 31, 183, 85, 69, 171, 249, 148, 140, 148, 46, 80, 201, 5, 132, 107, 126, 166, 226, 202, 77, 98, 106, 165, 63, 2, 240, 76, 142, 47, 142, 68, 96, 8, 225, 79, 187, 53, 90, 102, 80, 142, 204, 225, 192, 9, 11, 243, 81, 255, 187, 6, 245, 93, 72, 134, 230, 19, 82, 195, 28, 181, 234, 159, 41, 101, 51, 109, 155, 1, 244, 70, 53, 230, 132, 96, 66, 134, 75, 134, 140, 143, 167, 147, 183, 203, 92, 7, 134, 236, 154, 210, 136, 58, 202, 27, 186, 160, 41, 42, 93, 238, 115, 176, 24, 103, 233, 224, 73, 204, 105, 185, 238, 200, 128, 100, 165, 118, 213, 230, 133 }
+SESSION KEYGEN:
+PreMaster Secret:
+0000: D9 3F 70 3D 46 88 99 C6   47 F5 AD C2 AC 7A 34 3B  .?p=F...G....z4;
+0010: 15 41 0D 03 D0 F4 6F 84   1C C1 C8 70 8A 9A 9C C5  .A....o....p....
+0020: D1 F0 B3 4D B2 65 2C 89   DB 89 D4 E9 11 23 D9 02  ...M.e,......#..
+0030: 05 79 C4 2D DB E3 AB 26   F4 E2 8E 53 03 50 14 C9  .y.-...&...S.P..
+0040: 51 31 B3 E2 88 E6 5F 96   53 A5 E4 71 81 02 0D 34  Q1...._.S..q...4
+0050: 8D 0D F8 C9 A7 2E 30 31   00 28 5D FB 85 C2 5F FF  ......01.(]..._.
+0060: 58 5A 18 14 C7 73 CC 6F   00 33 35 5D DD 7C 3D EA  XZ...s.o.35]..=.
+0070: 15 86 48 52 BD E0 94 BA   6D EE A7 97 05 5B 25 D3  ..HR....m....[%.
+CONNECTION KEYGEN:
+Client Nonce:
+0000: 5D 03 EA D8 77 FE 59 07   5E AC 3F C4 ED 1C 23 9A  ]...w.Y.^.?...#.
+0010: 54 06 BE 06 06 17 25 1D   B6 D0 BD 21 85 D0 BD B3  T.....%....!....
+Server Nonce:
+0000: 5D 03 EA D8 75 CB C0 B4   63 02 E3 FC 7F 93 B4 F0  ]...u...c.......
+0010: A2 D9 11 A5 5A FB 2A 05   EF CA C9 35 EF E4 60 51  ....Z.*....5..`Q
+Master Secret:
+0000: 97 59 5A 17 3E 78 87 06   DB 82 94 9E F4 46 EF 59  .YZ.>x.......F.Y
+0010: 60 23 D5 D3 9B 22 79 5E   08 C0 90 27 9F 23 51 48  `#..."y^...'.#QH
+0020: 9B 66 3B 75 C1 97 F1 ED   C3 CD 65 37 EB 47 94 73  .f;u......e7.G.s
+Client MAC write Secret:
+0000: 01 BC 47 DF 17 44 23 55   37 C5 1E 62 48 84 6B E4  ..G..D#U7..bH.k.
+0010: DB C3 E8 17 EF 66 01 51   7F 0E 91 39 4A 88 31 98  .....f.Q...9J.1.
+Server MAC write Secret:
+0000: 0F 97 49 EA 46 A9 4E 6B   AD 8F C9 7B 50 0D CD CF  ..I.F.Nk....P...
+0010: 1E F0 FA 2C 24 94 BF 51   DC 6B D5 E3 53 BD CB 7E  ...,$..Q.k..S...
+Client write key:
+0000: D1 9B B4 95 BA DF 47 95   B6 4B 92 56 1F 49 E4 82  ......G..K.V.I..
+0010: D3 4A C6 33 D2 95 22 7D   51 B6 57 4F F3 3A E7 7B  .J.3..".Q.WO.:..
+Server write key:
+0000: 1E D8 BF ED 2A 78 B4 4C   27 EC 13 BD 3A 99 8B 36  ....*x.L'...:..6
+0010: B6 3C 25 14 0A A8 75 95   19 37 C4 7E FE CD F1 23  .<%...u..7.....#
+... no IV derived for this protocol
+main, READ: TLSv1.2 Handshake, length = 71
+check handshake state: certificate_verify[15]
+update handshake state: certificate_verify[15]
+upcoming handshake states: client change_cipher_spec[-1]
+upcoming handshake states: client finished[20]
+upcoming handshake states: server change_cipher_spec[-1]
+upcoming handshake states: server finished[20]
+*** CertificateVerify
+Signature Algorithm SHA256withDSA
+main, READ: TLSv1.2 Change Cipher Spec, length = 1
+update handshake state: change_cipher_spec
+upcoming handshake states: client finished[20]
+upcoming handshake states: server change_cipher_spec[-1]
+upcoming handshake states: server finished[20]
+main, READ: TLSv1.2 Handshake, length = 80
+check handshake state: finished[20]
+update handshake state: finished[20]
+upcoming handshake states: server change_cipher_spec[-1]
+upcoming handshake states: server finished[20]
+*** Finished
+verify_data:  { 121, 126, 102, 112, 186, 122, 116, 185, 232, 41, 212, 230 }
+***
+update handshake state: change_cipher_spec
+upcoming handshake states: server finished[20]
+main, WRITE: TLSv1.2 Change Cipher Spec, length = 1
+*** Finished
+verify_data:  { 233, 189, 151, 29, 81, 36, 239, 77, 171, 63, 71, 32 }
+***
+update handshake state: finished[20]
+main, WRITE: TLSv1.2 Handshake, length = 80
+%% Cached server session: [Session-2, TLS_DHE_DSS_WITH_AES_256_CBC_SHA256]
+main, WRITE: TLSv1.2 Application Data, length = 64
+main, called close()
+main, called closeInternal(true)
+main, SEND TLSv1.2 ALERT:  warning, description = close_notify
+main, WRITE: TLSv1.2 Alert, length = 64
+main, called closeSocket(true)
+Allow unsafe renegotiation: false
+Allow legacy hello messages: true
+Is initial handshake: true
+Is secure renegotiation: false
+main, READ: TLSv1.2 Handshake, length = 157
+check handshake state: client_hello[1]
+update handshake state: client_hello[1]
+upcoming handshake states: server_hello[2]
+*** ClientHello, TLSv1.2
+RandomCookie:  GMT: 1560550121 bytes = { 178, 111, 208, 228, 151, 4, 182, 182, 130, 167, 54, 224, 52, 175, 106, 181, 189, 49, 182, 50, 208, 229, 48, 39, 145, 68, 234, 23 }
+Session ID:  {}
+Cipher Suites: [TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_DHE_RSA_WITH_AES_256_GCM_SHA384, TLS_DHE_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256, TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_256_GCM_SHA384, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_256_CBC_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA256, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_128_CBC_SHA, SSL_RSA_WITH_3DES_EDE_CBC_SHA]
+Compression Methods:  { 0 }
+Extension elliptic_curves, curve names: {unknown curve 29, secp256r1, secp384r1}
+Extension ec_point_formats, formats: [uncompressed]
+Extension signature_algorithms, signature_algorithms: SHA512withRSA, SHA512withECDSA, SHA256withRSA, SHA384withRSA, SHA1withRSA, SHA256withECDSA, SHA384withECDSA, SHA1withECDSA, SHA1withDSA
+Unsupported extension type_35, data: 
+Unsupported extension type_16, data: 00:09:08:68:74:74:70:2f:31:2e:31
+Extension extended_master_secret
+Extension renegotiation_info, renegotiated_connection: <empty>
+***
+%% Initialized:  [Session-3, SSL_NULL_WITH_NULL_NULL]
+sun.security.ssl.ServerHandshaker Object {
+  doClientAuth: 2
+  certs: null
+  privateKey: null
+  serviceCreds: null
+  needClientVerify: false
+  tempPrivateKey: null
+  tempPublicKey: null
+  dh: null
+  ecdh: null
+  clientRequestedVersion: TLSv1.2
+  requestedCurves: Extension elliptic_curves, curve names: {unknown curve 29, secp256r1, secp384r1}
+  preferableSignatureAlgorithm: null
+  useSmartEphemeralDHKeys: false
+  useLegacyEphemeralDHKeys: false
+  customizedDHKeySize: -1
+  legacyAlgorithmConstraints: sun.security.util.LegacyAlgorithmConstraints@7f690630
+  protocolVersion: TLSv1.2
+  activeProtocolVersion: TLSv1.2
+  secureRenegotiation: true
+  clientVerifyData: [B@60addb54
+  serverVerifyData: [B@3f2a3a5
+  isInitialHandshake: true
+  enabledProtocols: [TLSv1.2]
+  enabledCipherSuites: [TLS_DHE_DSS_WITH_AES_256_CBC_SHA256]
+  identificationProtocol: null
+  algorithmConstraints: sun.security.ssl.SSLAlgorithmConstraints@4cb2c100
+  localSupportedSignAlgs: [sun.security.ssl.SignatureAndHashAlgorithm@6108b2d7, sun.security.ssl.SignatureAndHashAlgorithm@1554909b, sun.security.ssl.SignatureAndHashAlgorithm@6bf256fa, sun.security.ssl.SignatureAndHashAlgorithm@6cd8737, sun.security.ssl.SignatureAndHashAlgorithm@22f71333, sun.security.ssl.SignatureAndHashAlgorithm@13969fbe, sun.security.ssl.SignatureAndHashAlgorithm@35f983a6, sun.security.ssl.SignatureAndHashAlgorithm@6aaa5eb0, sun.security.ssl.SignatureAndHashAlgorithm@3498ed, sun.security.ssl.SignatureAndHashAlgorithm@1a407d53]
+  peerSupportedSignAlgs: [sun.security.ssl.SignatureAndHashAlgorithm@1554909b, sun.security.ssl.SignatureAndHashAlgorithm@6108b2d7, sun.security.ssl.SignatureAndHashAlgorithm@13969fbe, sun.security.ssl.SignatureAndHashAlgorithm@6cd8737, sun.security.ssl.SignatureAndHashAlgorithm@3498ed, sun.security.ssl.SignatureAndHashAlgorithm@22f71333, sun.security.ssl.SignatureAndHashAlgorithm@6bf256fa, sun.security.ssl.SignatureAndHashAlgorithm@6aaa5eb0, sun.security.ssl.SignatureAndHashAlgorithm@1a407d53]
+  activeProtocols: [TLSv1.2]
+  activeCipherSuites: [TLS_DHE_DSS_WITH_AES_256_CBC_SHA256]
+  serverNames: []
+  sniMatchers: []
+  isClient: false
+  needCertVerify: true
+  conn: 6fb554cc[SSL_NULL_WITH_NULL_NULL: Socket[addr=/2a02:aa16:1103:a800:a567:dd62:9af9:74a6,port=5138,localport=8443]]
+  engine: null
+  handshakeHash: sun.security.ssl.HandshakeHash@614c5515
+  input: sun.security.ssl.HandshakeInStream@77b52d12
+  output: sun.security.ssl.HandshakeOutStream@2d554825
+  sslContext: sun.security.ssl.SSLContextImpl$DefaultSSLContext@668bc3d5
+  clnt_random: sun.security.ssl.RandomCookie@68837a77
+  svr_random: sun.security.ssl.RandomCookie@6be46e8f
+  session: [Session-3, SSL_NULL_WITH_NULL_NULL]
+  handshakeState: sun.security.ssl.HandshakeStateManager@3567135c
+  clientHelloDelivered: true
+  serverHelloRequested: false
+  handshakeActivated: true
+  handshakeFinished: false
+  cipherSuite: SSL_NULL_WITH_NULL_NULL
+  keyExchange: NULL
+  resumingSession: false
+  enableNewSession: true
+  preferLocalCipherSuites: false
+  clntWriteKey: null
+  svrWriteKey: null
+  clntWriteIV: null
+  svrWriteIV: null
+  clntMacSecret: null
+  svrMacSecret: null
+  taskDelegated: false
+  delegatedTask: null
+  thrown: null
+  thrownLock: java.lang.Object@327471b5
+  debug: sun.security.ssl.Debug@6b2fad11
+  allowUnsafeRenegotiation: false
+  allowLegacyHelloMessages: true
+  rejectClientInitiatedRenego: false
+  useExtendedMasterSecret: true
+  allowLegacyResumption: true
+  allowLegacyMasterSecret: true
+  requestedToUseEMS: true
+  invalidated: false
+}
+%% Invalidated:  [Session-3, SSL_NULL_WITH_NULL_NULL]
+main, SEND TLSv1.2 ALERT:  fatal, description = handshake_failure
+main, WRITE: TLSv1.2 Alert, length = 2
+main, called closeSocket()
+main, handling exception: javax.net.ssl.SSLHandshakeException: no cipher suites in common
+main, called close()
+main, called closeInternal(true)

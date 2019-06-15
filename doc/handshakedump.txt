@@ -1,0 +1,81 @@
+sun.security.ssl.ServerHandshaker Object {
+  doClientAuth: 2
+  certs: null
+  privateKey: null
+  serviceCreds: null
+  needClientVerify: false
+  tempPrivateKey: null
+  tempPublicKey: null
+  dh: null
+  ecdh: null
+  clientRequestedVersion: TLSv1.2
+  requestedCurves: Extension elliptic_curves, curve names: {unknown curve 29, secp256r1, secp384r1}
+  preferableSignatureAlgorithm: null
+  useSmartEphemeralDHKeys: false
+  useLegacyEphemeralDHKeys: false
+  customizedDHKeySize: -1
+  legacyAlgorithmConstraints: sun.security.util.LegacyAlgorithmConstraints@7f690630
+  protocolVersion: TLSv1.2
+  activeProtocolVersion: TLSv1.2
+  secureRenegotiation: true
+  clientVerifyData: [B@60addb54
+  serverVerifyData: [B@3f2a3a5
+  isInitialHandshake: true
+  enabledProtocols: [TLSv1.2]
+  enabledCipherSuites: [TLS_DHE_DSS_WITH_AES_256_CBC_SHA256]
+  identificationProtocol: null
+  algorithmConstraints: sun.security.ssl.SSLAlgorithmConstraints@4cb2c100
+  localSupportedSignAlgs: [sun.security.ssl.SignatureAndHashAlgorithm@6108b2d7, sun.security.ssl.SignatureAndHashAlgorithm@1554909b, sun.security.ssl.SignatureAndHashAlgorithm@6bf256fa, sun.security.ssl.SignatureAndHashAlgorithm@6cd8737, sun.security.ssl.SignatureAndHashAlgorithm@22f71333, sun.security.ssl.SignatureAndHashAlgorithm@13969fbe, sun.security.ssl.SignatureAndHashAlgorithm@35f983a6, sun.security.ssl.SignatureAndHashAlgorithm@6aaa5eb0, sun.security.ssl.SignatureAndHashAlgorithm@3498ed, sun.security.ssl.SignatureAndHashAlgorithm@1a407d53]
+  peerSupportedSignAlgs: [sun.security.ssl.SignatureAndHashAlgorithm@1554909b, sun.security.ssl.SignatureAndHashAlgorithm@6108b2d7, sun.security.ssl.SignatureAndHashAlgorithm@13969fbe, sun.security.ssl.SignatureAndHashAlgorithm@6cd8737, sun.security.ssl.SignatureAndHashAlgorithm@3498ed, sun.security.ssl.SignatureAndHashAlgorithm@22f71333, sun.security.ssl.SignatureAndHashAlgorithm@6bf256fa, sun.security.ssl.SignatureAndHashAlgorithm@6aaa5eb0, sun.security.ssl.SignatureAndHashAlgorithm@1a407d53]
+  activeProtocols: [TLSv1.2]
+  activeCipherSuites: [TLS_DHE_DSS_WITH_AES_256_CBC_SHA256]
+  serverNames: []
+  sniMatchers: []
+  isClient: false
+  needCertVerify: true
+  conn: 6fb554cc[SSL_NULL_WITH_NULL_NULL: Socket[addr=/2a02:aa16:1103:a800:a567:dd62:9af9:74a6,port=5138,localport=8443]]
+  engine: null
+  handshakeHash: sun.security.ssl.HandshakeHash@614c5515
+  input: sun.security.ssl.HandshakeInStream@77b52d12
+  output: sun.security.ssl.HandshakeOutStream@2d554825
+  sslContext: sun.security.ssl.SSLContextImpl$DefaultSSLContext@668bc3d5
+  clnt_random: sun.security.ssl.RandomCookie@68837a77
+  svr_random: sun.security.ssl.RandomCookie@6be46e8f
+  session: [Session-3, SSL_NULL_WITH_NULL_NULL]
+  handshakeState: sun.security.ssl.HandshakeStateManager@3567135c
+  clientHelloDelivered: true
+  serverHelloRequested: false
+  handshakeActivated: true
+  handshakeFinished: false
+  cipherSuite: SSL_NULL_WITH_NULL_NULL
+  keyExchange: NULL
+  resumingSession: false
+  enableNewSession: true
+  preferLocalCipherSuites: false
+  clntWriteKey: null
+  svrWriteKey: null
+  clntWriteIV: null
+  svrWriteIV: null
+  clntMacSecret: null
+  svrMacSecret: null
+  taskDelegated: false
+  delegatedTask: null
+  thrown: null
+  thrownLock: java.lang.Object@327471b5
+  debug: sun.security.ssl.Debug@6b2fad11
+  allowUnsafeRenegotiation: false
+  allowLegacyHelloMessages: true
+  rejectClientInitiatedRenego: false
+  useExtendedMasterSecret: true
+  allowLegacyResumption: true
+  allowLegacyMasterSecret: true
+  requestedToUseEMS: true
+  invalidated: false
+}
+%% Invalidated:  [Session-3, SSL_NULL_WITH_NULL_NULL]
+main, SEND TLSv1.2 ALERT:  fatal, description = handshake_failure
+main, WRITE: TLSv1.2 Alert, length = 2
+main, called closeSocket()
+main, handling exception: javax.net.ssl.SSLHandshakeException: no cipher suites in common
+main, called close()
+main, called closeInternal(true)
