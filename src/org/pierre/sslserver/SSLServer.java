@@ -27,10 +27,7 @@ public class SSLServer {
             while (true) {
                 try (Socket socket = sslListener.accept()) {
                     PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
-                    for (;;) {
-                        out.println("Hello World!");
-                        Thread.sleep(1000);
-                    }
+                    out.println("Hello World!");
                 }
             }
         }
