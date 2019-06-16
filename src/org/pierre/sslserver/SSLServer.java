@@ -9,24 +9,28 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 public class SSLServer {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, InterruptedException {
         System.setProperty("javax.net.ssl.trustStore", "servertruststore.jks");
         System.setProperty("javax.net.ssl.trustStorePassword", "password");
         System.setProperty("javax.net.ssl.keyStore", "serverkeystore.jks");
         System.setProperty("javax.net.ssl.keyStorePassword", "password");
         System.setProperty("javax.net.debug", "ssl");
         System.setProperty("sun.security.ssl.allowUnsafeRenegotiation", "true");
+        System.setProperty("jdk.tls.server.cipherSuites", "TLS_DHE_DSS_WITH_AES_256_CBC_SHA256,TLS_DHE_RSA_WITH_AES_256_CBC_SHA256");
         int port = 8443;
         ServerSocketFactory factory = SSLServerSocketFactory.getDefault();
         try (ServerSocket listener = factory.createServerSocket(port)) {
             SSLServerSocket sslListener = (SSLServerSocket) listener;
             sslListener.setNeedClientAuth(true);
-            sslListener.setEnabledCipherSuites(new String[] { "TLS_DHE_DSS_WITH_AES_256_CBC_SHA256" });
+            //sslListener.setEnabledCipherSuites(new String[] { "TLS_DHE_DSS_WITH_AES_256_CBC_SHA256" });
             sslListener.setEnabledProtocols(new String[] { "TLSv1.2" });
             while (true) {
                 try (Socket socket = sslListener.accept()) {
                     PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
-                    out.println("Hello World!");
+                    for (;;) {
+                        out.println("Hello World!");
+                        Thread.sleep(1000);
+                    }
                 }
             }
         }
