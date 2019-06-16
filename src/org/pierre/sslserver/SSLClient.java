@@ -15,8 +15,8 @@ public class SSLClient {
     public static void main(String[] args) throws IOException, NoSuchAlgorithmException {
         System.setProperty("javax.net.ssl.trustStore", "clienttruststore.jks");
         System.setProperty("javax.net.ssl.trustStorePassword", "password");
-        System.setProperty("javax.net.ssl.keyStore", "clientkeystore.jks");
-        System.setProperty("javax.net.ssl.keyStorePassword", "password");
+        //System.setProperty("javax.net.ssl.keyStore", "clientkeystore.jks");
+        //System.setProperty("javax.net.ssl.keyStorePassword", "password");
 
         String host = "localhost";
         int port = 8443;
