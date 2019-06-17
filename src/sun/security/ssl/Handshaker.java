@@ -95,6 +95,7 @@ abstract class Handshaker {
     static final boolean useExtendedMasterSecret;
     static final boolean allowLegacyResumption = Debug.getBooleanProperty("jdk.tls.allowLegacyResumption", true);
     static final boolean allowLegacyMasterSecret = Debug.getBooleanProperty("jdk.tls.allowLegacyMasterSecret", true);
+    static final boolean traceHandshakeException = Debug.getBooleanProperty("jdk.tls.traceHandshakeException", true);
     boolean requestedToUseEMS = false;
     boolean invalidated;
 
@@ -147,14 +148,16 @@ abstract class Handshaker {
     }
 
     void fatalSE(byte var1, String var2, Throwable var3) throws IOException {
-        System.out.println(this.toString(this));
-        System.out.println("isConnNull " + this.conn == null);
-        if (this.conn != null) System.out.println(this.toString(this.conn));
-        System.out.println("isEngineNull " + this.engine == null);
-        if (this.engine != null) System.out.println(this.toString(this.engine));
-        System.out.println("getHostAddressSE " + this.getHostAddressSE());
-        System.out.println("getHostSE " + this.getHostSE());
-        System.out.println("session " + this.toString(this.getSession()));
+        if (traceHandshakeException) {
+            System.out.println(this.toString(this));
+            System.out.println("isConnNull " + this.conn == null);
+            if (this.conn != null) System.out.println(this.toString(this.conn));
+            System.out.println("isEngineNull " + this.engine == null);
+            if (this.engine != null) System.out.println(this.toString(this.engine));
+            System.out.println("getHostAddressSE " + this.getHostAddressSE());
+            System.out.println("getHostSE " + this.getHostSE());
+            System.out.println("session " + this.toString(this.getSession()));
+        }
         if (this.conn != null) {
             this.conn.fatal(var1, var2, var3);
         } else {
@@ -971,6 +974,7 @@ abstract class Handshaker {
 
     public String toString(Object obj) {
         StringBuilder result = new StringBuilder();
+        if (obj == null) { result.append("null"); return result.toString();}
         String newLine = System.getProperty("line.separator");
 
         result.append( obj.getClass().getName() );
