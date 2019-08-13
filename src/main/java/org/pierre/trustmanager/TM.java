@@ -14,7 +14,7 @@ public class TM {
         factory.init((KeyStore) null);
         TrustManager[] tms = factory.getTrustManagers();
         X509TrustManager tm = (X509TrustManager) tms[0];
-        X509Certificate[] ai = tm.getAcceptedIssuers();
+        X509Certificate[] ai = tm.getAcceptedIss    uers();
         Arrays.stream(ai).forEach(item -> System.out.println(item.toString()));
     }
 }
